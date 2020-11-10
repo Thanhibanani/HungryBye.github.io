@@ -22,13 +22,16 @@ body {
 .paragraf {
     padding: 200px;
     color: black;
+    font-size :35px;
+    overflow:hidden;
 }
 
 .HungryByepng{
-    margin:auto;
     position: relative;
-    padding:10px;
-    margin-bottom:45px;
+    bottom:80%;
+    overflow:hidden;
+    cursor: pointer;
+
 }
 
 .content {
@@ -232,7 +235,6 @@ nav a.active{
     font-size: 50px;
     font-weight: 700;
     position: absolute;
-    top: 5%;
     left: 50%;
     transform: translate(-50%, 50%);
 }
