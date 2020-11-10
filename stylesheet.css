@@ -1,0 +1,404 @@
+/*
+Learning material:
+https://www.youtube.com/watch?v=8QKOaTYvYUA&feature=emb_logo&ab_channel=KevinPowell
+*/
+
+:root {
+    --background: #6B9080;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    background: #EAF4F4;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+}
+
+.paragraf {
+    padding: 200px;
+    color: black;
+}
+
+.HungryByepng{
+    margin:auto;
+    position: relative;
+    padding:10px;
+    margin-bottom:45px;
+}
+
+.content {
+    background-color: #EAF4F4;
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+
+header {
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+.logo{
+    color: white;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+    outline: 3px;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: #A4C3B2;
+}
+
+nav a.active{
+    color: #A4C3B2;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+    }
+
+    nav {
+         all: unset;
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1, 1);
+        background: none;
+        top: initial;
+        left: initial;
+
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: #A4C3B2;
+        position: absolute;
+        bottom: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
+}
+
+.donation_image {
+    display: flex;
+    position: relative;
+    text-align: center;
+    color: black;
+    margin-top: 80px;
+    width: 100vw;
+}
+
+@media only screen and (max-width: 800px){
+    .donation_image_heading{
+        height: 20vw;
+        padding: 0;
+    }
+}
+
+.donation_image_heading {
+    font-size: 50px;
+    font-weight: 700;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.donation_image_paragraph {
+    font-size: 40px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 90vw;
+}
+
+@media only screen and (max-width: 800px){
+    .donation_image_paragraph{
+        height: 10vw;
+    }
+}
+
+.our_solution_paragraphs{
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    width: 100vw;
+}
+
+/*Learning material:
+https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 1700px) {
+    .column {
+        width: 100vh;
+        padding: -20px;
+    }
+}
+
+.contact-section{
+    margin: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:5%;
+    overflow:hidden;
+}
+
+.contact-info{
+    color: #0000;
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+.contact-info i{
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.contact-form{
+    max-width: 700px;
+    margin-right: 50px;
+}
+
+.contact-info, .contact-form{
+    flex: 1;
+    color:black;
+}
+
+
+.contact-form .text-box{
+    background: #000;
+    color: #fff;
+    border: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-form .text-box:first-child{
+    margin-right: 15px;
+}
+
+.contact-form textarea{
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-form .send-btn{
+    float: right;
+    background: #2E94E3;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form .send-btn:hover{
+    background: #0582E3;
+}
+
+.contact{
+    color:black;
+}
+
+@media screen and (max-width: 950px){
+    .contact-section{
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form{
+        margin: 30px 50px;
+    }
+
+    .contact-form h2{
+        font-size: 30px;
+    }
+
+    .contact-form .text-box{
+        width: 100%;
+    }
+}
+
+.footer {
+    position: fixed;
+    display:grid;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#6B9080;
+    color: white;
+    text-align: center;
+}
+

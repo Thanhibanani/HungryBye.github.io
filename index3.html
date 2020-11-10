@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Contact Us</title>
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo"><h1>HungryBye</h1></a>
+    <input type="checkbox" id="nav-toggle"
+           class="nav-toggle">
+    <nav>
+        <ul class="nav-list">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="index2.html">Our solution</a>
+            </li>
+            <li>
+                <a class= "active" href="index3.html">Contact us</a>
+            </li>
+        </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+</header>
+
+<div class="content">
+    <!--contact section start-->
+    <div class="contact-section">
+        <div class="contact-info">
+            <div><i class="fas fa-map-marker-alt"></i>Oslo, Norway</div>
+            <div><i class="fas fa-envelope"></i>HungryBye.support@outlook.com</div>
+            <div><i class="fas fa-phone"></i>+00 0000 000 000</div>
+            <div><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
+        </div>
+        <div class="contact-form">
+            <form class="contact" action="" method="post">
+                <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+                <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <input type="submit" name="submit" class="send-btn" value="Send">
+            </form>
+        </div>
+    </div>
+    <!--contact section end-->
+</div>
+
+<div class="footer">
+    <p>HungryBye™ ©</p>
+</div>
+
+</body>
+</html>
