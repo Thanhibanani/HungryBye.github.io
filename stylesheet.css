@@ -220,6 +220,7 @@ nav a.active{
     position: relative;
     text-align: center;
     color: black;
+    overflow:hidden;
     margin-top: 80px;
     width: 100vw;
 }
