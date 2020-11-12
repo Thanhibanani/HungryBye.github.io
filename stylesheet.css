@@ -19,20 +19,43 @@ body {
     font-weight: 400;
 }
 
-.paragraf {
-    padding: 200px;
-    color: black;
-    font-size :35px;
-    overflow:hidden;
-}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  section:nth-child(1) {
+    color: #6B9080;
+    flex-direction: column;
+    padding:80px;
+    min-height: 600px;
+    background-color: #EAF4F4;
+  }
+  
+  section:nth-child(1) h1 {
+    font-size: 45px;
+    font-weight: 900;
+  }
+  
+  section:nth-child(1) p {
+    font-size: 35px;
+    font-weight: 700;
+    width: 70vw;
+    max-width: 700px;
+    margin-top: 20px;
+  }
 
-.HungryByepng{
-    position: relative;
-    bottom:80%;
-    overflow:hidden;
-    cursor: pointer;
+  .section .image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section .image-content img {
+    max-width: 100%;
+  }
 
-}
 
 .content {
     background-color: #EAF4F4;
@@ -214,30 +237,36 @@ nav a.active{
         transform: scale(1,1);
     }
 }
-
 .donation_image {
     display: flex;
     position: relative;
     text-align: center;
     color: black;
-    overflow:hidden;
     margin-top: 80px;
-    width: 100vw;
+    width: 100%;
+    height: auto;
 }
 
-@media only screen and (max-width: 800px){
-    .donation_image_heading{
-        height: 20vw;
-        padding: 0;
-    }
+.food {
+    width: 100%;
+    height: auto;
 }
 
 .donation_image_heading {
     font-size: 50px;
     font-weight: 700;
     position: absolute;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, 50%);
+}
+
+@media only screen and (max-width: 1300px){
+    .donation_image_heading{
+        font-size: 30px;
+        height: 5vw;
+        width: 100%;
+    }
 }
 
 .donation_image_paragraph {
@@ -250,14 +279,16 @@ nav a.active{
     width: 90vw;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1300px){
     .donation_image_paragraph{
-        height: 10vw;
+        font-size: 20px;
+        width: 99%;
+        height: 20vw
     }
 }
 
 .our_solution_paragraphs{
-    padding: 50px;
+    padding: 30px;
     font-family: Arial, sans-serif;
     font-size: 30px;
     width: 100vw;
@@ -268,10 +299,49 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
 
 .column {
     float: left;
+    justify-content: center;
+    width: 33.33%;
+    padding: 50px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 100vh;
+        padding: -20px;
+    }
+}
+.column {
+    float: left;
+    justify-content: center;
+    width: 33.33%;
+    padding: 50px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 100vh;
+        padding: -20px;
+    }
+}
+
+.column {
+    float: left;
+    justify-content: center;
     width: 33.33%;
     padding: 5px;
 }
-
 .row::after {
     content: "";
     clear: both;
@@ -288,26 +358,13 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
 .contact-section{
     margin: 100px;
     width: 80%;
+    padding:10%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom:5%;
     overflow:hidden;
 }
-
-.contact-info{
-    color: #0000;
-    max-width: 500px;
-    line-height: 65px;
-    padding-left: 50px;
-    font-size: 18px;
-}
-
-.contact-info i{
-    margin-right: 20px;
-    font-size: 25px;
-}
-
 .contact-form{
     max-width: 700px;
     margin-right: 50px;
@@ -353,7 +410,7 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
 }
 
 .contact-form .send-btn{
-    float: right;
+    float: center;
     background: #2E94E3;
     color: #fff;
     border: none;
