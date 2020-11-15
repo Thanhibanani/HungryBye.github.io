@@ -355,12 +355,31 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
     }
 }
 
+section:nth-child(){
+grid-area:Content;
+grid-column-start: 1;
+grid-column-end: end;
+grid-row-start: 1;
+grid-row-end: end;
+}
+
+@media screen and (max-width: 640px){
+    .section:nth-child() {
+        grid-column-start: 1;
+        grid-column-end: end;
+        grid-row-start: 1;
+        grid-row-end: end;
+    
+    }
+  }
 section.Contact{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #EAF4F4;
     flex-direction: column;
+
+
 
     
   }
