@@ -355,106 +355,22 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
     }
 }
 
-.contact-section{
-    margin: 100px;
-    width: 80%;
-    padding:10%;
+section.Contact{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom:5%;
-    overflow:hidden;
-}
-.contact-form{
-    max-width: 700px;
-    margin-right: 50px;
-}
+    background-color: #EAF4F4;
+    flex-direction: column;
 
-.contact-info, .contact-form{
-    flex: 1;
-    color:black;
-}
-
-
-.contact-form .text-box{
-    background: #000;
-    color: #fff;
-    border: none;
-    width: calc(50% - 10px);
-    height: 50px;
-    font-size: 15px;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
-
-.contact-form .text-box:first-child{
-    margin-right: 15px;
-}
-
-.contact-form textarea{
-    background: #000;
-    color: #fff;
-    border: none;
-    width: 100%;
-    padding: 12px;
-    font-size: 15px;
-    min-height: 200px;
-    max-height: 400px;
-    resize: vertical;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
-
-.contact-form .send-btn{
-    float: center;
-    background: #2E94E3;
-    color: #fff;
-    border: none;
-    width: 100px;
-    height: 40px;
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-a.send-btn,a.send-btn:hover{
-    text-decoration: none;
+    
   }
-
-.contact-form .send-btn:hover{
-    background: #0582E3;
-}
-
-.contact{
-    color:black;
-}
-
-@media screen and (max-width: 950px){
-    .contact-section{
-        flex-direction: column;
-    }
-
-    .contact-info, .contact-form{
-        margin: 30px 50px;
-    }
-
-    .contact-form h2{
-        font-size: 30px;
-    }
-
-    .contact-form .text-box{
-        width: 100%;
-    }
-}
+  
+  section.Contact span{
+    font-size: 45px;
+    font-weight: 700;
+    color: black;
+    margin-top:100px;
+  }
 
 .footer {
     position: fixed;
