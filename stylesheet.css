@@ -414,7 +414,7 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
     background: #2E94E3;
     color: #fff;
     border: none;
-    width: 120px;
+    width: 100px;
     height: 40px;
     font-size: 15px;
     font-weight: 600;
@@ -422,8 +422,13 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
     letter-spacing: 2px;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
     transition: 0.3s;
 }
+
+a.send-btn,a.send-btn:hover{
+    text-decoration: none;
+  }
 
 .contact-form .send-btn:hover{
     background: #0582E3;
